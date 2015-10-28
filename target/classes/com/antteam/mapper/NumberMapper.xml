@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.antteam.mapper.NumberMapper" >
+  <resultMap id="BaseResultMap" type="com.antteam.bean.Number" >
+    <id column="order_id" property="order_id" jdbcType="BIGINT" />
+    <result column="user_name" property="user_name" jdbcType="VARCHAR" />
+    <result column="create_time" property="create_time" jdbcType="DATE" />
+    <result column="total" property="total" jdbcType="INTEGER" />
+    <result column="_1" property="_1" jdbcType="INTEGER" />
+    <result column="_2" property="_2" jdbcType="INTEGER" />
+    <result column="_3" property="_3" jdbcType="INTEGER" />
+    <result column="_4" property="_4" jdbcType="INTEGER" />
+    <result column="_5" property="_5" jdbcType="INTEGER" />
+    <result column="_6" property="_6" jdbcType="INTEGER" />
+    <result column="_7" property="_7" jdbcType="INTEGER" />
+    <result column="_8" property="_8" jdbcType="INTEGER" />
+    <result column="_9" property="_9" jdbcType="INTEGER" />
+    <result column="_10" property="_10" jdbcType="INTEGER" />
+    <result column="_11" property="_11" jdbcType="INTEGER" />
+    <result column="_12" property="_12" jdbcType="INTEGER" />
+    <result column="_13" property="_13" jdbcType="INTEGER" />
+    <result column="_14" property="_14" jdbcType="INTEGER" />
+    <result column="_15" property="_15" jdbcType="INTEGER" />
+    <result column="_16" property="_16" jdbcType="INTEGER" />
+    <result column="_17" property="_17" jdbcType="INTEGER" />
+    <result column="_18" property="_18" jdbcType="INTEGER" />
+    <result column="_19" property="_19" jdbcType="INTEGER" />
+    <result column="_20" property="_20" jdbcType="INTEGER" />
+    <result column="_21" property="_21" jdbcType="INTEGER" />
+    <result column="_22" property="_22" jdbcType="INTEGER" />
+    <result column="_23" property="_23" jdbcType="INTEGER" />
+    <result column="_24" property="_24" jdbcType="INTEGER" />
+    <result column="_25" property="_25" jdbcType="INTEGER" />
+    <result column="_26" property="_26" jdbcType="INTEGER" />
+    <result column="_27" property="_27" jdbcType="INTEGER" />
+    <result column="_28" property="_28" jdbcType="INTEGER" />
+    <result column="_29" property="_29" jdbcType="INTEGER" />
+    <result column="_30" property="_30" jdbcType="INTEGER" />
+    <result column="_31" property="_31" jdbcType="INTEGER" />
+    <result column="_32" property="_32" jdbcType="INTEGER" />
+    <result column="_33" property="_33" jdbcType="INTEGER" />
+    <result column="_34" property="_34" jdbcType="INTEGER" />
+    <result column="_35" property="_35" jdbcType="INTEGER" />
+    <result column="_36" property="_36" jdbcType="INTEGER" />
+    <result column="_37" property="_37" jdbcType="INTEGER" />
+    <result column="_38" property="_38" jdbcType="INTEGER" />
+    <result column="_39" property="_39" jdbcType="INTEGER" />
+    <result column="_40" property="_40" jdbcType="INTEGER" />
+    <result column="_41" property="_41" jdbcType="INTEGER" />
+    <result column="_42" property="_42" jdbcType="INTEGER" />
+    <result column="_43" property="_43" jdbcType="INTEGER" />
+    <result column="_44" property="_44" jdbcType="INTEGER" />
+    <result column="_45" property="_45" jdbcType="INTEGER" />
+    <result column="_46" property="_46" jdbcType="INTEGER" />
+    <result column="_47" property="_47" jdbcType="INTEGER" />
+    <result column="_48" property="_48" jdbcType="INTEGER" />
+    <result column="_49" property="_49" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    order_id, user_name, create_time, total, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, 
+    _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, 
+    _28, _29, _30, _31, _32, _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, 
+    _45, _46, _47, _48, _49
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from number
+    where order_id = #{order_id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from number
+    where order_id = #{order_id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.antteam.bean.Number" >
+    insert into number (order_id, user_name, create_time, 
+      total, _1, _2, _3, 
+      _4, _5, _6, _7, 
+      _8, _9, _10, _11, 
+      _12, _13, _14, _15, 
+      _16, _17, _18, _19, 
+      _20, _21, _22, _23, 
+      _24, _25, _26, _27, 
+      _28, _29, _30, _31, 
+      _32, _33, _34, _35, 
+      _36, _37, _38, _39, 
+      _40, _41, _42, _43, 
+      _44, _45, _46, _47, 
+      _48, _49)
+    values (#{order_id,jdbcType=BIGINT}, #{user_name,jdbcType=VARCHAR}, #{create_time,jdbcType=DATE}, 
+      #{total,jdbcType=INTEGER}, #{_1,jdbcType=INTEGER}, #{_2,jdbcType=INTEGER}, #{_3,jdbcType=INTEGER}, 
+      #{_4,jdbcType=INTEGER}, #{_5,jdbcType=INTEGER}, #{_6,jdbcType=INTEGER}, #{_7,jdbcType=INTEGER}, 
+      #{_8,jdbcType=INTEGER}, #{_9,jdbcType=INTEGER}, #{_10,jdbcType=INTEGER}, #{_11,jdbcType=INTEGER}, 
+      #{_12,jdbcType=INTEGER}, #{_13,jdbcType=INTEGER}, #{_14,jdbcType=INTEGER}, #{_15,jdbcType=INTEGER}, 
+      #{_16,jdbcType=INTEGER}, #{_17,jdbcType=INTEGER}, #{_18,jdbcType=INTEGER}, #{_19,jdbcType=INTEGER}, 
+      #{_20,jdbcType=INTEGER}, #{_21,jdbcType=INTEGER}, #{_22,jdbcType=INTEGER}, #{_23,jdbcType=INTEGER}, 
+      #{_24,jdbcType=INTEGER}, #{_25,jdbcType=INTEGER}, #{_26,jdbcType=INTEGER}, #{_27,jdbcType=INTEGER}, 
+      #{_28,jdbcType=INTEGER}, #{_29,jdbcType=INTEGER}, #{_30,jdbcType=INTEGER}, #{_31,jdbcType=INTEGER}, 
+      #{_32,jdbcType=INTEGER}, #{_33,jdbcType=INTEGER}, #{_34,jdbcType=INTEGER}, #{_35,jdbcType=INTEGER}, 
+      #{_36,jdbcType=INTEGER}, #{_37,jdbcType=INTEGER}, #{_38,jdbcType=INTEGER}, #{_39,jdbcType=INTEGER}, 
+      #{_40,jdbcType=INTEGER}, #{_41,jdbcType=INTEGER}, #{_42,jdbcType=INTEGER}, #{_43,jdbcType=INTEGER}, 
+      #{_44,jdbcType=INTEGER}, #{_45,jdbcType=INTEGER}, #{_46,jdbcType=INTEGER}, #{_47,jdbcType=INTEGER}, 
+      #{_48,jdbcType=INTEGER}, #{_49,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.antteam.bean.Number" >
+    insert into number
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="order_id != null" >
+        order_id,
+      </if>
+      <if test="user_name != null" >
+        user_name,
+      </if>
+      <if test="create_time != null" >
+        create_time,
+      </if>
+      <if test="total != null" >
+        total,
+      </if>
+      <if test="_1 != null" >
+        _1,
+      </if>
+      <if test="_2 != null" >
+        _2,
+      </if>
+      <if test="_3 != null" >
+        _3,
+      </if>
+      <if test="_4 != null" >
+        _4,
+      </if>
+      <if test="_5 != null" >
+        _5,
+      </if>
+      <if test="_6 != null" >
+        _6,
+      </if>
+      <if test="_7 != null" >
+        _7,
+      </if>
+      <if test="_8 != null" >
+        _8,
+      </if>
+      <if test="_9 != null" >
+        _9,
+      </if>
+      <if test="_10 != null" >
+        _10,
+      </if>
+      <if test="_11 != null" >
+        _11,
+      </if>
+      <if test="_12 != null" >
+        _12,
+      </if>
+      <if test="_13 != null" >
+        _13,
+      </if>
+      <if test="_14 != null" >
+        _14,
+      </if>
+      <if test="_15 != null" >
+        _15,
+      </if>
+      <if test="_16 != null" >
+        _16,
+      </if>
+      <if test="_17 != null" >
+        _17,
+      </if>
+      <if test="_18 != null" >
+        _18,
+      </if>
+      <if test="_19 != null" >
+        _19,
+      </if>
+      <if test="_20 != null" >
+        _20,
+      </if>
+      <if test="_21 != null" >
+        _21,
+      </if>
+      <if test="_22 != null" >
+        _22,
+      </if>
+      <if test="_23 != null" >
+        _23,
+      </if>
+      <if test="_24 != null" >
+        _24,
+      </if>
+      <if test="_25 != null" >
+        _25,
+      </if>
+      <if test="_26 != null" >
+        _26,
+      </if>
+      <if test="_27 != null" >
+        _27,
+      </if>
+      <if test="_28 != null" >
+        _28,
+      </if>
+      <if test="_29 != null" >
+        _29,
+      </if>
+      <if test="_30 != null" >
+        _30,
+      </if>
+      <if test="_31 != null" >
+        _31,
+      </if>
+      <if test="_32 != null" >
+        _32,
+      </if>
+      <if test="_33 != null" >
+        _33,
+      </if>
+      <if test="_34 != null" >
+        _34,
+      </if>
+      <if test="_35 != null" >
+        _35,
+      </if>
+      <if test="_36 != null" >
+        _36,
+      </if>
+      <if test="_37 != null" >
+        _37,
+      </if>
+      <if test="_38 != null" >
+        _38,
+      </if>
+      <if test="_39 != null" >
+        _39,
+      </if>
+      <if test="_40 != null" >
+        _40,
+      </if>
+      <if test="_41 != null" >
+        _41,
+      </if>
+      <if test="_42 != null" >
+        _42,
+      </if>
+      <if test="_43 != null" >
+        _43,
+      </if>
+      <if test="_44 != null" >
+        _44,
+      </if>
+      <if test="_45 != null" >
+        _45,
+      </if>
+      <if test="_46 != null" >
+        _46,
+      </if>
+      <if test="_47 != null" >
+        _47,
+      </if>
+      <if test="_48 != null" >
+        _48,
+      </if>
+      <if test="_49 != null" >
+        _49,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="order_id != null" >
+        #{order_id,jdbcType=BIGINT},
+      </if>
+      <if test="user_name != null" >
+        #{user_name,jdbcType=VARCHAR},
+      </if>
+      <if test="create_time != null" >
+        #{create_time,jdbcType=DATE},
+      </if>
+      <if test="total != null" >
+        #{total,jdbcType=INTEGER},
+      </if>
+      <if test="_1 != null" >
+        #{_1,jdbcType=INTEGER},
+      </if>
+      <if test="_2 != null" >
+        #{_2,jdbcType=INTEGER},
+      </if>
+      <if test="_3 != null" >
+        #{_3,jdbcType=INTEGER},
+      </if>
+      <if test="_4 != null" >
+        #{_4,jdbcType=INTEGER},
+      </if>
+      <if test="_5 != null" >
+        #{_5,jdbcType=INTEGER},
+      </if>
+      <if test="_6 != null" >
+        #{_6,jdbcType=INTEGER},
+      </if>
+      <if test="_7 != null" >
+        #{_7,jdbcType=INTEGER},
+      </if>
+      <if test="_8 != null" >
+        #{_8,jdbcType=INTEGER},
+      </if>
+      <if test="_9 != null" >
+        #{_9,jdbcType=INTEGER},
+      </if>
+      <if test="_10 != null" >
+        #{_10,jdbcType=INTEGER},
+      </if>
+      <if test="_11 != null" >
+        #{_11,jdbcType=INTEGER},
+      </if>
+      <if test="_12 != null" >
+        #{_12,jdbcType=INTEGER},
+      </if>
+      <if test="_13 != null" >
+        #{_13,jdbcType=INTEGER},
+      </if>
+      <if test="_14 != null" >
+        #{_14,jdbcType=INTEGER},
+      </if>
+      <if test="_15 != null" >
+        #{_15,jdbcType=INTEGER},
+      </if>
+      <if test="_16 != null" >
+        #{_16,jdbcType=INTEGER},
+      </if>
+      <if test="_17 != null" >
+        #{_17,jdbcType=INTEGER},
+      </if>
+      <if test="_18 != null" >
+        #{_18,jdbcType=INTEGER},
+      </if>
+      <if test="_19 != null" >
+        #{_19,jdbcType=INTEGER},
+      </if>
+      <if test="_20 != null" >
+        #{_20,jdbcType=INTEGER},
+      </if>
+      <if test="_21 != null" >
+        #{_21,jdbcType=INTEGER},
+      </if>
+      <if test="_22 != null" >
+        #{_22,jdbcType=INTEGER},
+      </if>
+      <if test="_23 != null" >
+        #{_23,jdbcType=INTEGER},
+      </if>
+      <if test="_24 != null" >
+        #{_24,jdbcType=INTEGER},
+      </if>
+      <if test="_25 != null" >
+        #{_25,jdbcType=INTEGER},
+      </if>
+      <if test="_26 != null" >
+        #{_26,jdbcType=INTEGER},
+      </if>
+      <if test="_27 != null" >
+        #{_27,jdbcType=INTEGER},
+      </if>
+      <if test="_28 != null" >
+        #{_28,jdbcType=INTEGER},
+      </if>
+      <if test="_29 != null" >
+        #{_29,jdbcType=INTEGER},
+      </if>
+      <if test="_30 != null" >
+        #{_30,jdbcType=INTEGER},
+      </if>
+      <if test="_31 != null" >
+        #{_31,jdbcType=INTEGER},
+      </if>
+      <if test="_32 != null" >
+        #{_32,jdbcType=INTEGER},
+      </if>
+      <if test="_33 != null" >
+        #{_33,jdbcType=INTEGER},
+      </if>
+      <if test="_34 != null" >
+        #{_34,jdbcType=INTEGER},
+      </if>
+      <if test="_35 != null" >
+        #{_35,jdbcType=INTEGER},
+      </if>
+      <if test="_36 != null" >
+        #{_36,jdbcType=INTEGER},
+      </if>
+      <if test="_37 != null" >
+        #{_37,jdbcType=INTEGER},
+      </if>
+      <if test="_38 != null" >
+        #{_38,jdbcType=INTEGER},
+      </if>
+      <if test="_39 != null" >
+        #{_39,jdbcType=INTEGER},
+      </if>
+      <if test="_40 != null" >
+        #{_40,jdbcType=INTEGER},
+      </if>
+      <if test="_41 != null" >
+        #{_41,jdbcType=INTEGER},
+      </if>
+      <if test="_42 != null" >
+        #{_42,jdbcType=INTEGER},
+      </if>
+      <if test="_43 != null" >
+        #{_43,jdbcType=INTEGER},
+      </if>
+      <if test="_44 != null" >
+        #{_44,jdbcType=INTEGER},
+      </if>
+      <if test="_45 != null" >
+        #{_45,jdbcType=INTEGER},
+      </if>
+      <if test="_46 != null" >
+        #{_46,jdbcType=INTEGER},
+      </if>
+      <if test="_47 != null" >
+        #{_47,jdbcType=INTEGER},
+      </if>
+      <if test="_48 != null" >
+        #{_48,jdbcType=INTEGER},
+      </if>
+      <if test="_49 != null" >
+        #{_49,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.antteam.bean.Number" >
+    update number
+    <set >
+      <if test="user_name != null" >
+        user_name = #{user_name,jdbcType=VARCHAR},
+      </if>
+      <if test="create_time != null" >
+        create_time = #{create_time,jdbcType=DATE},
+      </if>
+      <if test="total != null" >
+        total = #{total,jdbcType=INTEGER},
+      </if>
+      <if test="_1 != null" >
+        _1 = #{_1,jdbcType=INTEGER},
+      </if>
+      <if test="_2 != null" >
+        _2 = #{_2,jdbcType=INTEGER},
+      </if>
+      <if test="_3 != null" >
+        _3 = #{_3,jdbcType=INTEGER},
+      </if>
+      <if test="_4 != null" >
+        _4 = #{_4,jdbcType=INTEGER},
+      </if>
+      <if test="_5 != null" >
+        _5 = #{_5,jdbcType=INTEGER},
+      </if>
+      <if test="_6 != null" >
+        _6 = #{_6,jdbcType=INTEGER},
+      </if>
+      <if test="_7 != null" >
+        _7 = #{_7,jdbcType=INTEGER},
+      </if>
+      <if test="_8 != null" >
+        _8 = #{_8,jdbcType=INTEGER},
+      </if>
+      <if test="_9 != null" >
+        _9 = #{_9,jdbcType=INTEGER},
+      </if>
+      <if test="_10 != null" >
+        _10 = #{_10,jdbcType=INTEGER},
+      </if>
+      <if test="_11 != null" >
+        _11 = #{_11,jdbcType=INTEGER},
+      </if>
+      <if test="_12 != null" >
+        _12 = #{_12,jdbcType=INTEGER},
+      </if>
+      <if test="_13 != null" >
+        _13 = #{_13,jdbcType=INTEGER},
+      </if>
+      <if test="_14 != null" >
+        _14 = #{_14,jdbcType=INTEGER},
+      </if>
+      <if test="_15 != null" >
+        _15 = #{_15,jdbcType=INTEGER},
+      </if>
+      <if test="_16 != null" >
+        _16 = #{_16,jdbcType=INTEGER},
+      </if>
+      <if test="_17 != null" >
+        _17 = #{_17,jdbcType=INTEGER},
+      </if>
+      <if test="_18 != null" >
+        _18 = #{_18,jdbcType=INTEGER},
+      </if>
+      <if test="_19 != null" >
+        _19 = #{_19,jdbcType=INTEGER},
+      </if>
+      <if test="_20 != null" >
+        _20 = #{_20,jdbcType=INTEGER},
+      </if>
+      <if test="_21 != null" >
+        _21 = #{_21,jdbcType=INTEGER},
+      </if>
+      <if test="_22 != null" >
+        _22 = #{_22,jdbcType=INTEGER},
+      </if>
+      <if test="_23 != null" >
+        _23 = #{_23,jdbcType=INTEGER},
+      </if>
+      <if test="_24 != null" >
+        _24 = #{_24,jdbcType=INTEGER},
+      </if>
+      <if test="_25 != null" >
+        _25 = #{_25,jdbcType=INTEGER},
+      </if>
+      <if test="_26 != null" >
+        _26 = #{_26,jdbcType=INTEGER},
+      </if>
+      <if test="_27 != null" >
+        _27 = #{_27,jdbcType=INTEGER},
+      </if>
+      <if test="_28 != null" >
+        _28 = #{_28,jdbcType=INTEGER},
+      </if>
+      <if test="_29 != null" >
+        _29 = #{_29,jdbcType=INTEGER},
+      </if>
+      <if test="_30 != null" >
+        _30 = #{_30,jdbcType=INTEGER},
+      </if>
+      <if test="_31 != null" >
+        _31 = #{_31,jdbcType=INTEGER},
+      </if>
+      <if test="_32 != null" >
+        _32 = #{_32,jdbcType=INTEGER},
+      </if>
+      <if test="_33 != null" >
+        _33 = #{_33,jdbcType=INTEGER},
+      </if>
+      <if test="_34 != null" >
+        _34 = #{_34,jdbcType=INTEGER},
+      </if>
+      <if test="_35 != null" >
+        _35 = #{_35,jdbcType=INTEGER},
+      </if>
+      <if test="_36 != null" >
+        _36 = #{_36,jdbcType=INTEGER},
+      </if>
+      <if test="_37 != null" >
+        _37 = #{_37,jdbcType=INTEGER},
+      </if>
+      <if test="_38 != null" >
+        _38 = #{_38,jdbcType=INTEGER},
+      </if>
+      <if test="_39 != null" >
+        _39 = #{_39,jdbcType=INTEGER},
+      </if>
+      <if test="_40 != null" >
+        _40 = #{_40,jdbcType=INTEGER},
+      </if>
+      <if test="_41 != null" >
+        _41 = #{_41,jdbcType=INTEGER},
+      </if>
+      <if test="_42 != null" >
+        _42 = #{_42,jdbcType=INTEGER},
+      </if>
+      <if test="_43 != null" >
+        _43 = #{_43,jdbcType=INTEGER},
+      </if>
+      <if test="_44 != null" >
+        _44 = #{_44,jdbcType=INTEGER},
+      </if>
+      <if test="_45 != null" >
+        _45 = #{_45,jdbcType=INTEGER},
+      </if>
+      <if test="_46 != null" >
+        _46 = #{_46,jdbcType=INTEGER},
+      </if>
+      <if test="_47 != null" >
+        _47 = #{_47,jdbcType=INTEGER},
+      </if>
+      <if test="_48 != null" >
+        _48 = #{_48,jdbcType=INTEGER},
+      </if>
+      <if test="_49 != null" >
+        _49 = #{_49,jdbcType=INTEGER},
+      </if>
+    </set>
+    where order_id = #{order_id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.antteam.bean.Number" >
+    update number
+    set user_name = #{user_name,jdbcType=VARCHAR},
+      create_time = #{create_time,jdbcType=DATE},
+      total = #{total,jdbcType=INTEGER},
+      _1 = #{_1,jdbcType=INTEGER},
+      _2 = #{_2,jdbcType=INTEGER},
+      _3 = #{_3,jdbcType=INTEGER},
+      _4 = #{_4,jdbcType=INTEGER},
+      _5 = #{_5,jdbcType=INTEGER},
+      _6 = #{_6,jdbcType=INTEGER},
+      _7 = #{_7,jdbcType=INTEGER},
+      _8 = #{_8,jdbcType=INTEGER},
+      _9 = #{_9,jdbcType=INTEGER},
+      _10 = #{_10,jdbcType=INTEGER},
+      _11 = #{_11,jdbcType=INTEGER},
+      _12 = #{_12,jdbcType=INTEGER},
+      _13 = #{_13,jdbcType=INTEGER},
+      _14 = #{_14,jdbcType=INTEGER},
+      _15 = #{_15,jdbcType=INTEGER},
+      _16 = #{_16,jdbcType=INTEGER},
+      _17 = #{_17,jdbcType=INTEGER},
+      _18 = #{_18,jdbcType=INTEGER},
+      _19 = #{_19,jdbcType=INTEGER},
+      _20 = #{_20,jdbcType=INTEGER},
+      _21 = #{_21,jdbcType=INTEGER},
+      _22 = #{_22,jdbcType=INTEGER},
+      _23 = #{_23,jdbcType=INTEGER},
+      _24 = #{_24,jdbcType=INTEGER},
+      _25 = #{_25,jdbcType=INTEGER},
+      _26 = #{_26,jdbcType=INTEGER},
+      _27 = #{_27,jdbcType=INTEGER},
+      _28 = #{_28,jdbcType=INTEGER},
+      _29 = #{_29,jdbcType=INTEGER},
+      _30 = #{_30,jdbcType=INTEGER},
+      _31 = #{_31,jdbcType=INTEGER},
+      _32 = #{_32,jdbcType=INTEGER},
+      _33 = #{_33,jdbcType=INTEGER},
+      _34 = #{_34,jdbcType=INTEGER},
+      _35 = #{_35,jdbcType=INTEGER},
+      _36 = #{_36,jdbcType=INTEGER},
+      _37 = #{_37,jdbcType=INTEGER},
+      _38 = #{_38,jdbcType=INTEGER},
+      _39 = #{_39,jdbcType=INTEGER},
+      _40 = #{_40,jdbcType=INTEGER},
+      _41 = #{_41,jdbcType=INTEGER},
+      _42 = #{_42,jdbcType=INTEGER},
+      _43 = #{_43,jdbcType=INTEGER},
+      _44 = #{_44,jdbcType=INTEGER},
+      _45 = #{_45,jdbcType=INTEGER},
+      _46 = #{_46,jdbcType=INTEGER},
+      _47 = #{_47,jdbcType=INTEGER},
+      _48 = #{_48,jdbcType=INTEGER},
+      _49 = #{_49,jdbcType=INTEGER}
+    where order_id = #{order_id,jdbcType=BIGINT}
+  </update>
+  
+  
+  
+  <select id="selectNumberList" resultMap="BaseResultMap" parameterType="com.antteam.bean.NumberPagination" >
+    select 
+    <include refid="Base_Column_List" />
+    from number
+    limit #{pagination.min,jdbcType=INTEGER},#{pagination.pageSize,jdbcType=INTEGER}
+  </select>
+  
+    <select id="count" resultType="java.lang.Integer">
+	    select count(order_id)
+	    from number
+    </select>
+</mapper>
