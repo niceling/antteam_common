@@ -1,28 +1,29 @@
-package com.antteam.bean;
+package com.antteam.utils;
 
 import java.io.Serializable;
 
-import com.antteam.utils.Pagination;
-
-public class NumberPagination implements Serializable{
+public class PaginationBean<T> implements Serializable{
 
 	private static final long serialVersionUID = -5587249940635839267L;
 
-	private Number number;
+	private T bean;
 	private Pagination pagination;
 	
-	public NumberPagination(Number number, Pagination pagination) {
+	public PaginationBean(T bean, Pagination pagination) {
 		super();
-		this.number = number;
+		this.bean = bean;
 		this.pagination = pagination;
 	}
 	
-	public Number getNumber() {
-		return number;
+	public T getBean() {
+		return bean;
 	}
-	public void setNumber(Number number) {
-		this.number = number;
+
+
+	public void setBean(T bean) {
+		this.bean = bean;
 	}
+
 	public Pagination getPagination() {
 		return pagination;
 	}
