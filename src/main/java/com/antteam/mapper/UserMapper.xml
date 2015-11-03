@@ -144,5 +144,11 @@
   	 select 
     <include refid="Base_Column_List" />
     from ant_user
+    limit #{pagination.min,jdbcType=INTEGER},#{pagination.pageSize,jdbcType=INTEGER}
   </select>
+  <select id="count" resultType="java.lang.Integer" parameterType="com.antteam.utils.PaginationBean">
+  	 select count(*)
+     from ant_user
+  </select>
+  
 </mapper>

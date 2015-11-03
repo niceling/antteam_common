@@ -2,7 +2,7 @@ package com.antteam.utils;
 
 public class Pagination {
 	private int pageSize=10;
-	private int min;//初始偏移量
+	private int min;//
 	
 	public Pagination(int currentPage) {
 		super();

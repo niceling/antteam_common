@@ -20,5 +20,5 @@ public interface UserMapper {
     
     List<User> query(PaginationBean<User> paginationBean);
     
-    public int count();
+    int count(PaginationBean<User> paginationBean);
 }
