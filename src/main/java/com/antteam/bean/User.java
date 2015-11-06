@@ -2,6 +2,8 @@ package com.antteam.bean;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class User {
     private Integer id;
 
@@ -72,11 +74,18 @@ public class User {
     public boolean isLocked() {
 		return locked;
 	}
+    
+    public String getLockedLabel(){
+    	if(locked){
+    		return "禁用";
+    	}
+    	return "启用";
+    }
 
 	public void setLocked(boolean locked) {
 		this.locked = locked;
 	}
-
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
 	public Date getCreateTime() {
         return createTime;
     }
